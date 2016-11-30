@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "Avenir";
+  src: url(../fonts/AvenirLTW0165Medium.woff);
+}
+@font-face {
+  font-family: "Avenir Heavy";
+  font-weight: bold;
+  src: url(../fonts/AvenirLTW0185Heavy.woff);
+}
+body {
+  font-size: 12px;
+  font-family: "Avenir";
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  display: inline-block;
+  width: 200px;
+}
+ul li .textile-1 {
+  position: relative;
+  padding: 5px;
+}
+ul li .textile-1 .image {
+  width: 100%;
+}
+ul li .textile-1 .symbol {
+  position: absolute;
+  right: 0;
+  margin: 10px;
+}
+ul li .textile-1 .title {
+  padding: 5px 0;
+}
+ul li .textile-1 .title .name,
+ul li .textile-1 .title .code {
+  display: block;
+}
+ul li .textile-2 {
+  position: relative;
+  padding: 5px;
+}
+ul li .textile-2 .image {
+  width: 100%;
+}
+ul li .textile-2 .symbol {
+  padding: 5px 10px;
+  background-color: #FFF;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  border-radius: 0 0 5px 5px;
+}
+ul li .textile-2 .title {
+  padding: 5px 0;
+}
+ul li .textile-2 .title .name,
+ul li .textile-2 .title .code {
+  display: block;
+}
+ul li .textile-3 {
+  position: relative;
+  padding: 5px;
+}
+ul li .textile-3 .image {
+  width: 100%;
+}
+ul li .textile-3 .symbol {
+  padding: 5px 10px;
+  background-color: #FFF;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  border-radius: 0 0 5px 5px;
+}
+ul li .textile-3 .title {
+  padding: 10px;
+  background-color: #8E908F;
+  text-align: right;
+  color: #fff;
+}
+ul li .textile-3 .title .name,
+ul li .textile-3 .title .code {
+  display: block;
+}
+ul li .textile-4 {
+  position: relative;
+  padding: 5px;
+}
+ul li .textile-4 .image {
+  width: 100%;
+}
+ul li .textile-4 .symbol {
+  padding: 6px 10px;
+  background-color: #FFF;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 20px;
+}
+ul li .textile-4 .title {
+  padding: 10px;
+  background-color: #8E908F;
+  text-align: right;
+  color: #fff;
+}
+ul li .textile-4 .title .name,
+ul li .textile-4 .title .code {
+  display: block;
+}
+ul li .textile-5 {
+  position: relative;
+  padding: 5px;
+}
+ul li .textile-5 .image {
+  width: 100%;
+}
+ul li .textile-5 .symbol {
+  padding: 6px 10px;
+  background-color: #FFF;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border-radius: 20px;
+}
+ul li .textile-5 .title {
+  padding: 5px 0;
+}
+ul li .textile-5 .title .name,
+ul li .textile-5 .title .code {
+  display: block;
+}
