@@ -141,7 +141,7 @@
   }
   hr:before {
     content: '— EOF —';
-    color: rgba(17, 17, 17, 0.2);
+    color: rgba(17, 17, 17, 0.4);
     font-size: 14px;
   }
   .experience {
