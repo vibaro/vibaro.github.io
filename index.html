@@ -1,189 +1,199 @@
-<div class="avatar">
-        <div class="photo">
-          <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAvIAAAAJDRhZTJhNTRiLTAwNDAtNDExZS1iYTA1LTlkNGZiMTY0MzM5Yg.jpg" alt="avatar">
-        </div>
-      </div>
-      <header>
-        <div>
-          <div class='cmd'>
-        "<span>hi, stranger!</span> <i class='fa fa-hand-peace-o'></i>"
-      </div>
-      <div class='cmd'>
-        <span>cd c:\users\vinicius\projects\website && ls</span>
-      </div>
-      <div class='cmd'>
-        <a href='#about'>About.js</a>
-        <a href='#projects'>Projects.js</a>
-        <a href='#experience'>Experience.js</a>
-        <a href='#certifications'>Certifications.js</a>
-        <a href='#social'>Social.js</a>
-      </div>
-      <div class='cmd'>
-        <span class='blink'></span>
-      </div>
-        </div>
-      </header>
-      <div class='section js' id='about'>About</div>
-      <div class='about'>
-        <div class='text'>
-          <pre>
-        module.exports = { 
-          name: "Vinicius Romano",
-          from: "São Paulo, Brazil", 
-          about: "A web developer, js fanatic, html and css lover",
-          languages: [ 'pt-BR', 'en-US' ],
-          projects:  <a href="#projects">[…]</a>,
-          experience:  { "total": "10 years", "data": <a href="#experience">[…]</a> }, 
-          certifications: <a href="#certifications">[…]</a>,
-          social: <a href="#social">[…]</a>
-        }</pre></div>
-      </div>
-      <hr>
-      <div class='section js' id='projects'>Projects</div>
-      <div class='script'>
-        <span>require('./about').projects.forEach(project => console.log(project));</span>
-      </div>
-      <ul class='projects'>
-        <li>
-          <img alt='' src='http://via.placeholder.com/300x250'>
-        </li>
-        <li>
-          <img alt='' src='http://via.placeholder.com/300x250'>
-        </li>
-        <li>
-          <img alt='' src='http://via.placeholder.com/300x250'>
-        </li>
-        <li>
-          <img alt='' src='http://via.placeholder.com/300x250'>
-        </li>
-        <li>
-          <img alt='' src='http://via.placeholder.com/300x250'>
-        </li>
-        <li>
-          <img alt='' src='http://via.placeholder.com/300x250'>
-        </li>
-        <li>
-          <img alt='' src='http://via.placeholder.com/300x250'>
-        </li>
-      </ul>
-      <hr>
-      <div class='section js' id='experience'>Experience</div>
-      <div class='script'>
-        <span>console.table(require('./about').experience.data);</span>
-      </div>
-      <div class="experience">
-        <table>
-          <thead>
-            <tr>
-              <th>(index)</th>
-              <th>name</th>
-              <th>date</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>0</td>
-              <td>Web Developer at Resource IT Solutions</td>
-              <td>Feb 2017 – Present (8 mos)</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Web Developer at Allsteel</td>
-              <td>Apr 2016 – Feb 2017 (11 mos)</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Web Developer at Resource IT Solutions</td>
-              <td>Aug 2015 – Apr 2016 (9 mos)</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Web Developer at BrasilbyBus.com</td>
-              <td>Aug 2014 – Aug 2015 (1 yr 1 mo)</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>Web Developer at Resource IT Solutions</td>
-              <td>Jul 2013 – Aug 2014 (1 yr 2 mos)</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>Web Developer at Bloan</td>
-              <td>Feb 2013 – Apr 2013 (3 mos)</td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>Web Developer at InMov</td>
-              <td>May 2010 – Feb 2013 (2 yrs 10 mos)</td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td>Developer at Sonda Procwork</td>
-              <td>Feb 2009 – May 2010 (1 yr 4 mos)</td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td>Developer at Smart System</td>
-              <td>Jul 2008 – Feb 2009 (8 mos)</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <hr>
-      <div class='section js' id='certifications'>Certifications</div>
-      <div class='script'>
-        <span>console.table(require('./about').certifications);</span>
-      </div>
-      <div class="experience">
-        <table>
-          <thead>
-            <tr>
-              <th>(index)</th>
-              <th>name</th>
-              <th>date</th>
-              <th>link</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>0</td>
-              <td>HTML Certification</td>
-              <td>Jul 2017</td>
-              <td><a href="http://www.refsnesdata.no/certification/w3certified.asp?id=8953137" target="_blank">open <i class="fa fa-external-link" aria-hidden="true"></i></a></td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>CSS Certification</td>
-              <td>Jun 2017</td>
-              <td><a href="http://www.refsnesdata.no/certification/w3certified.asp?id=8953137" target="_blank">open <i class="fa fa-external-link" aria-hidden="true"></i></a></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>JavaScript Certification</td>
-              <td>May 2017</td>
-              <td><a href="http://www.refsnesdata.no/certification/w3certified.asp?id=8953137" target="_blank">open <i class="fa fa-external-link" aria-hidden="true"></i></a></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>70-480 - Programming in HTML5 with JavaScript and CSS3</td>
-              <td>Dec 2015</td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <hr>
-      <div class='section js' id='social'>Social</div>
-      <div class='script'>
-        <span>require('./about').social.forEach(item => console.log(item));</span>
-      </div>
-      <div class='cmd'>
-        <a href='https://github.com/viniromano' target="_blank">GitHub <i class="fa fa-external-link" aria-hidden="true"></i></a>
-      </div>
-      <div class='cmd'>
-        <a href='https://www.linkedin.com/in/viniciusromano/' target="_blank">LinkedIn <i class="fa fa-external-link" aria-hidden="true"></i></a>
-      </div>
-      <div class='cmd'>
-        <a href='https://last.fm/user/vini-koen' target="_blank">Last.fm <i class="fa fa-external-link" aria-hidden="true"></i></a>
-      </div>
-      <hr>
+<html lang="en-US">
+    <head>
+        <title>Vinicius Romano</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="avatar">
+            <div class="photo">
+                <img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAvIAAAAJDRhZTJhNTRiLTAwNDAtNDExZS1iYTA1LTlkNGZiMTY0MzM5Yg.jpg" alt="avatar">
+            </div>
+            </div>
+            <header>
+            <div>
+                <div class='cmd'>
+            "<span>hi, stranger!</span> <i class='fa fa-hand-peace-o'></i>"
+            </div>
+            <div class='cmd'>
+            <span>cd c:\users\vinicius\projects\website && ls</span>
+            </div>
+            <div class='cmd'>
+            <a href='#about'>About.js</a>
+            <a href='#projects'>Projects.js</a>
+            <a href='#experience'>Experience.js</a>
+            <a href='#certifications'>Certifications.js</a>
+            <a href='#social'>Social.js</a>
+            </div>
+            <div class='cmd'>
+            <span class='blink'></span>
+            </div>
+            </div>
+            </header>
+            <div class='section js' id='about'>About</div>
+            <div class='about'>
+            <div class='text'>
+                <pre>
+    module.exports = { 
+        name: "Vinicius Romano",
+        from: "São Paulo, Brazil", 
+        about: "A web developer, js fanatic, html and css lover",
+        languages: [ 'pt-BR', 'en-US' ],
+        projects:  <a href="#projects">[…]</a>,
+        experience:  { "total": "10 years", "data": <a href="#experience">[…]</a> }, 
+        certifications: <a href="#certifications">[…]</a>,
+        social: <a href="#social">[…]</a>
+    }</pre></div>
+            </div>
+            <hr>
+            <div class='section js' id='projects'>Projects</div>
+            <div class='script'>
+            <span>require('./about').projects.forEach(project => console.log(project));</span>
+            </div>
+            <ul class='projects'>
+            <li>
+                <img alt='' src='http://via.placeholder.com/300x250'>
+            </li>
+            <li>
+                <img alt='' src='http://via.placeholder.com/300x250'>
+            </li>
+            <li>
+                <img alt='' src='http://via.placeholder.com/300x250'>
+            </li>
+            <li>
+                <img alt='' src='http://via.placeholder.com/300x250'>
+            </li>
+            <li>
+                <img alt='' src='http://via.placeholder.com/300x250'>
+            </li>
+            <li>
+                <img alt='' src='http://via.placeholder.com/300x250'>
+            </li>
+            <li>
+                <img alt='' src='http://via.placeholder.com/300x250'>
+            </li>
+            </ul>
+            <hr>
+            <div class='section js' id='experience'>Experience</div>
+            <div class='script'>
+            <span>console.table(require('./about').experience.data);</span>
+            </div>
+            <div class="experience">
+            <table>
+                <thead>
+                <tr>
+                    <th>(index)</th>
+                    <th>name</th>
+                    <th>date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>Web Developer at Resource IT Solutions</td>
+                    <td>Feb 2017 – Present (8 mos)</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Web Developer at Allsteel</td>
+                    <td>Apr 2016 – Feb 2017 (11 mos)</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Web Developer at Resource IT Solutions</td>
+                    <td>Aug 2015 – Apr 2016 (9 mos)</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Web Developer at BrasilbyBus.com</td>
+                    <td>Aug 2014 – Aug 2015 (1 yr 1 mo)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Web Developer at Resource IT Solutions</td>
+                    <td>Jul 2013 – Aug 2014 (1 yr 2 mos)</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Web Developer at Bloan</td>
+                    <td>Feb 2013 – Apr 2013 (3 mos)</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Web Developer at InMov</td>
+                    <td>May 2010 – Feb 2013 (2 yrs 10 mos)</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Developer at Sonda Procwork</td>
+                    <td>Feb 2009 – May 2010 (1 yr 4 mos)</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Developer at Smart System</td>
+                    <td>Jul 2008 – Feb 2009 (8 mos)</td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+            <hr>
+            <div class='section js' id='certifications'>Certifications</div>
+            <div class='script'>
+            <span>console.table(require('./about').certifications);</span>
+            </div>
+            <div class="experience">
+            <table>
+                <thead>
+                <tr>
+                    <th>(index)</th>
+                    <th>name</th>
+                    <th>date</th>
+                    <th>link</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>HTML Certification</td>
+                    <td>Jul 2017</td>
+                    <td><a href="http://www.refsnesdata.no/certification/w3certified.asp?id=8953137" target="_blank">open <i class="fa fa-external-link" aria-hidden="true"></i></a></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>CSS Certification</td>
+                    <td>Jun 2017</td>
+                    <td><a href="http://www.refsnesdata.no/certification/w3certified.asp?id=8953137" target="_blank">open <i class="fa fa-external-link" aria-hidden="true"></i></a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>JavaScript Certification</td>
+                    <td>May 2017</td>
+                    <td><a href="http://www.refsnesdata.no/certification/w3certified.asp?id=8953137" target="_blank">open <i class="fa fa-external-link" aria-hidden="true"></i></a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>70-480 - Programming in HTML5 with JavaScript and CSS3</td>
+                    <td>Dec 2015</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+            <hr>
+            <div class='section js' id='social'>Social</div>
+            <div class='script'>
+            <span>require('./about').social.forEach(item => console.log(item));</span>
+            </div>
+            <div class='cmd'>
+            <a href='https://github.com/viniromano' target="_blank">GitHub <i class="fa fa-external-link" aria-hidden="true"></i></a>
+            </div>
+            <div class='cmd'>
+            <a href='https://www.linkedin.com/in/viniciusromano/' target="_blank">LinkedIn <i class="fa fa-external-link" aria-hidden="true"></i></a>
+            </div>
+            <div class='cmd'>
+            <a href='https://last.fm/user/vini-koen' target="_blank">Last.fm <i class="fa fa-external-link" aria-hidden="true"></i></a>
+            </div>
+            <hr>
+    </body>
+</html>
