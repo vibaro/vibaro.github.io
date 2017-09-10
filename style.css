@@ -106,7 +106,6 @@
   }
   .about {
     display: flex;
-    height: 300px;
   }
   .about .text {
     font-size: 30px;
