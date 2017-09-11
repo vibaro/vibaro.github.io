@@ -24,21 +24,6 @@
     padding: 0 3px;
     margin-left: -6px;
   }
-  .avatar {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .avatar .photo {
-    position: relative;
-  }
-  .avatar .photo img {
-    width: 300px;
-    border-radius: 50%;
-    position: relative;
-    margin: 40px;
-    border: 7px solid rgba(0, 0, 0, 0.1);
-  }
   header {
     height: 250px;
     display: flex;
@@ -82,17 +67,11 @@
     color: #888;
     font-size: 20px;
   }
-  .section.html:after {
-    content: '.html';
-  }
-  .section.json:after {
-    content: '.json';
+  .section.txt:after {
+    content: '.txt';
   }
   .section.js:after {
     content: '.js';
-  }
-  .section.sql:after {
-    content: '.sql';
   }
   .text {
     padding: 0 30px;
@@ -130,7 +109,7 @@
     font-size: 20px;
   }
   .script {
-    padding: 0 55px 30px;
+    padding: 0 55px 60px;
     color: #888;
   }
   hr {
@@ -168,4 +147,3 @@
     font-weight: 100;
     padding: 4px 6px;
   }
-  
