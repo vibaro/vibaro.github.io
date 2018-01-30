@@ -1,21 +1,25 @@
 body {
   margin: 0;
   display: flex;
-  background: url(assets/bg.jpg) -220px center / cover no-repeat;
+  background: url(assets/bg.jpg) -200px center / cover no-repeat;
 }
 body:before {
   content: '';
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.55);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 10;
 }
 body a:focus,
 body a:hover,
 body button:focus,
-body button:hover {
+body button:hover,
+body .selected a,
+body select:focus,
+body select:hover {
   outline: 5px solid rgba(0, 150, 136, 0.5);
+  z-index: 30;
 }
 .hero {
   display: flex;
@@ -60,7 +64,7 @@ body button:hover {
 }
 .page .buttons {
   display: flex;
-  padding: 20px;
+  padding: 15px 25px;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -71,11 +75,14 @@ body button:hover {
   background-color: transparent;
   border: none;
   font-size: 24px;
-  display: block;
   text-align: center;
   width: 100%;
   padding: 20px;
   cursor: pointer;
+  display: none;
+}
+.page.ready .buttons button {
+  display: block;
 }
 .step-1 .tickets {
   list-style: none;
@@ -88,13 +95,21 @@ body button:hover {
 }
 .step-1 .tickets li a {
   text-decoration: none;
+  display: block;
+  position: relative;
+  margin: 2px 0px;
+}
+.step-1 .tickets li a:hover .ticket:before,
+.step-1 .tickets li a:focus .ticket:before,
+.step-1 .tickets li a.selected .ticket:before {
+  background-color: rgba(0, 150, 136, 0.8);
 }
 .step-1 .tickets li.main {
   width: 100%;
 }
 .step-1 .tickets li .ticket {
   padding: 20px;
-  margin: 0 -2px;
+  margin: 0;
   position: relative;
 }
 .step-1 .tickets li .ticket.rio-sao-francisco {
@@ -137,7 +152,7 @@ body button:hover {
 }
 .step-1 .tickets li .ticket .time:after {
   content: '';
-  height: 65px;
+  height: 5%;
   display: block;
 }
 .step-1 .tickets li .ticket .price {
@@ -155,9 +170,25 @@ body button:hover {
   font-size: 14px;
   opacity: .7;
 }
+.step-2 .form {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+}
+.step-2 .form select {
+  font-size: 32px;
+  padding: 15px 20px;
+}
+.step-2 .form h4 {
+  font-size: 24px;
+  color: #666;
+}
 .step-3 .boat {
-  width: 300px;
-  margin: 65px auto;
+  width: 250px;
+  margin: 45px auto;
   position: relative;
   z-index: 20;
   background-color: #fff;
@@ -165,7 +196,7 @@ body button:hover {
 .step-3 .boat:after,
 .step-3 .boat:before {
   content: '';
-  height: 120px;
+  height: 80px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 70%;
   position: absolute;
@@ -175,10 +206,10 @@ body button:hover {
   left: 0;
 }
 .step-3 .boat:after {
-  bottom: -60px;
+  bottom: -40px;
 }
 .step-3 .boat:before {
-  top: -60px;
+  top: -40px;
 }
 .step-3 ul {
   padding: 0px 20px;
@@ -190,33 +221,52 @@ body button:hover {
 }
 .step-3 ul .seat {
   display: block;
-  margin: 30px 10px;
-  background-color: #009688;
+  margin: 20px 10px;
 }
 .step-3 ul .seat a {
   text-decoration: none;
   text-align: center;
   padding: 20px;
-  color: #fff;
+  color: #666;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 24px;
+  background-color: #fafafafa;
+  box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.1);
 }
-.step-3 ul .seat a .status {
+.step-3 ul .seat a.busy {
+  color: #fff;
+  background-color: #9e9e9e;
+  pointer-events: none;
+}
+.step-3 ul .seat a.selected {
+  background-color: #009688;
+  color: #fff;
+}
+.step-3 ul .seat .status {
   display: block;
   font-size: 12px;
 }
-.step-3 ul .seat.busy {
-  background-color: #9e9e9e;
+.step-4 .info {
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
 }
-.step-3 ul .seat.busy a {
-  pointer-events: none;
+.step-4 .info table tr td {
+  padding: 10px 20px;
+}
+.step-4 .info table .title {
+  text-align: right;
+}
+.step-4 .info table .value {
+  text-align: left;
 }
 .step-5 p {
   padding: 50px;
-  font-size: 90px;
+  font-size: 70px;
   text-align: center;
   color: #444;
 }

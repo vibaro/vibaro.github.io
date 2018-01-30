@@ -10,7 +10,7 @@
             <h1>De Canoa</h1>
         </div>
 
-        <div class="page step-1 active">
+        <div data-step="1" class="page step-1 active">
             <h3>Escolha sua rota</h3>
 
             <ul class="tickets">
@@ -106,39 +106,55 @@
             </ul>
 
             <div class="buttons">
-                <button>Escolher a data</button>
+                <button class="js-next-step">Escolher a data</button>
             </div>
         </div>
 
-        <div class="page step-2">
+        <div data-step="2" class="page step-2 ready">
             <h3>Escolha o dia</h3>
+
+            <div class="form">
+                <div>
+                    <h4>Fazemos apenas reservas com 3 dias de antecedência</h4>
+
+                    <select id="date">
+                        <option>Hoje</option>
+                        <option>Amanhã</option>
+                        <option>Depois de amanhã</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="js-next-step">Escolher o assento</button>
+            </div>
         </div>
 
-        <div class="page step-3">
+        <div data-step="3" class="page step-3">
             <h3>Escolha seu lugar na canoa</h3>
 
             <div class="boat">
                 <ul>
-                    <li class="seat busy">
-                        <a href="javascript:;">
+                    <li class="seat">
+                        <a href="javascript:;" class="busy">
                             <span><small>Lugar</small> 1 <small class="status">ocupado</small></span>
                         </a>
                     </li>
 
                     <li class="seat">
                         <a href="javascript:;">
-                            <span><small>Lugar</small> 2</span>
+                            <span><small>Lugar</small> 2 <small class="status">livre</small></span>
                         </a>
                     </li>
 
                     <li class="seat">
                         <a href="javascript:;">
-                            <span><small>Lugar</small> 3</span>
+                            <span><small>Lugar</small> 3 <small class="status">livre</small></span>
                         </a>
                     </li>
 
-                    <li class="seat busy">
-                        <a href="javascript:;">
+                    <li class="seat">
+                        <a href="javascript:;" class="busy">
                             <span><small>Lugar</small> 4 <small class="status">ocupado</small></span>
                         </a>
                     </li>
@@ -146,22 +162,53 @@
             </div>
 
             <div class="buttons">
-                <button>Ir para confirmação</button>
+                <button class="js-next-step">Ir para confirmação</button>
             </div>
         </div>
 
-        <div class="page step-4">
+        <div data-step="4" class="page step-4 ready">
             <h3>Confirme sua viagem</h3>
-            <p>Blablablablabla</p>
+
+            <div class="info">
+                <table>
+                    <tr>
+                        <td class="title">Rota</td>
+                        <td class="value">Rio Amazonas</td>
+                    </tr>
+
+                    <tr>
+                        <td class="title">Duração</td>
+                        <td class="value">49 dias</td>
+                    </tr>
+
+                    <tr>
+                        <td class="title">Dia</td>
+                        <td class="value">Amanhã</td>
+                    </tr>
+
+                    <tr>
+                        <td class="title">Lugar</td>
+                        <td class="value">3</td>
+                    </tr>
+
+                    <tr>
+                        <td class="title">Valor</td>
+                        <td class="value">R$ 500,00</td>
+                    </tr>
+                </table>
+            </div>
 
             <div class="buttons">
-                <button>Confirmar compra</button>
+                <button class="js-next-step">Confirmar compra</button>
             </div>
         </div>
 
-        <div class="page step-5">
+        <div data-step="5" class="page step-5">
             <h3>Pagamento</h3>
             <p>Bata palmas para pagar, obrigado!</p>
         </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>

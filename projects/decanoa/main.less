@@ -1,22 +1,26 @@
 body {
     margin: 0;
     display: flex;
-    background: url(assets/bg.jpg) -220px center/cover no-repeat;
+    background: url(assets/bg.jpg) -200px center/cover no-repeat;
 
     &:before {
         content: '';
         position: absolute;
         height: 100%;
         width: 100%;
-        background-color: rgba(0, 0, 0, .55);
+        background-color: rgba(0, 0, 0, .6);
         z-index: 10;
     }
 
     a:focus,
     a:hover,
     button:focus,
-    button:hover {
+    button:hover,
+    .selected a,
+    select:focus,
+    select:hover {
         outline: 5px solid rgba(0, 150, 136, .5);
+        z-index: 30;
     }
 }
 
@@ -68,7 +72,7 @@ body {
 
     .buttons {
         display: flex;
-        padding: 20px;
+        padding: 15px 25px;
         position: absolute;
         bottom: 0;
         right: 0;
@@ -79,11 +83,17 @@ body {
             background-color: transparent;
             border: none;
             font-size: 24px;
-            display: block;
             text-align: center;
             width: 100%;
             padding: 20px;
             cursor: pointer;
+            display: none;
+        }
+    }
+
+    &.ready {
+        .buttons button {
+            display: block;
         }
     }
 }
@@ -100,6 +110,15 @@ body {
 
             a {
                 text-decoration: none;
+                display: block;
+                position: relative;
+                margin: 2px 0px;
+
+                &:hover .ticket:before,
+                &:focus .ticket:before,
+                &.selected .ticket:before {
+                    background-color: rgba(0, 150, 136, .8);
+                }
             }
 
             &.main {
@@ -108,7 +127,7 @@ body {
 
             .ticket {
                 padding: 20px;
-                margin: 0 -2px;
+                margin: 0;
                 position: relative;
 
                 &.rio-sao-francisco {
@@ -158,7 +177,7 @@ body {
 
                 .time:after {
                     content: '';
-                    height: 65px;
+                    height: 5%;
                     display: block;
                 }
 
@@ -186,13 +205,30 @@ body {
 }
 
 .step-2 {
-    
+    .form {
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60vh;
+        text-align: center;
+
+        select {
+            font-size: 32px;
+            padding: 15px 20px;
+        }
+
+        h4 {
+            font-size: 24px;
+            color: #666;
+        }
+    }
 }
 
 .step-3 {
     .boat {
-        width: 300px;
-        margin: 65px auto;
+        width: 250px;
+        margin: 45px auto;
         position: relative;
         z-index: 20;
         background-color: #fff;
@@ -200,7 +236,7 @@ body {
         &:after,
         &:before {
             content: '';
-            height: 120px;
+            height: 80px;
             border: 1px solid rgba(0, 0, 0, 0.3);
             border-radius: 70%;
             position: absolute;
@@ -211,11 +247,11 @@ body {
         }
 
         &:after {
-            bottom: -60px;
+            bottom: -40px;
         }
         
         &:before {
-            top: -60px;
+            top: -40px;
         }
     }
 
@@ -229,32 +265,62 @@ body {
 
         .seat {
             display: block;
-            margin: 30px 10px;
-            background-color: rgb(0, 150, 136);
+            margin: 20px 10px;
 
             a {
                 text-decoration: none;
                 text-align: center;
                 padding: 20px;
-                color: #fff;
+                color: #666;
                 height: 40px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 font-size: 24px;
+                background-color: #fafafafa;
+                box-shadow: inset 0 0 10px 5px rgba(0,0,0,.1);
 
-                .status {
-                    display: block;
-                    font-size: 12px;
+                &.busy {
+                    color: #fff;
+                    background-color: rgb(158, 158, 158);
+                    pointer-events: none;
+                }
+
+                &.selected {
+                    background-color: rgb(0, 150, 136);
+                    color: #fff;
                 }
             }
 
-            &.busy {
-                background-color: rgb(158, 158, 158);
+            .status {
+                display: block;
+                font-size: 12px;
+            }
+        }
+    }
+}
 
-                a {
-                    pointer-events: none;
+.step-4 {
+    .info {
+        padding: 0 20px;
+        display: flex;
+        justify-content: center;
+        margin: 60px 0;
+
+        table {
+            tr {
+                td {
+                    padding: 10px 20px;
+                    
                 }
+            }
+
+            .title {
+                text-align: right;
+            }
+            
+            .value {
+                text-align: left;
             }
         }
     }
@@ -263,7 +329,7 @@ body {
 .step-5 {
     p {
         padding: 50px;
-        font-size: 90px;
+        font-size: 70px;
         text-align: center;
         color: #444;
     }
