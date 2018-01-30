@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  display: flex;
+  background: url(assets/bg.jpg) -220px center / cover no-repeat;
+}
+body:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 10;
+}
+body a:focus,
+body a:hover,
+body button:focus,
+body button:hover {
+  outline: 5px solid rgba(0, 150, 136, 0.5);
+}
+.hero {
+  display: flex;
+  border-bottom: 1px solid #000;
+  align-items: center;
+  z-index: 20;
+  width: 60%;
+}
+.hero h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 120px;
+  margin: 80px;
+  color: #fff;
+  position: relative;
+}
+.hero h1:after {
+  content: 'remando desde 1238';
+  position: absolute;
+  font-size: 21px;
+  bottom: -5px;
+  font-style: italic;
+  right: 0;
+  opacity: .7;
+}
+.page {
+  margin: 0 auto;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #fafafa;
+  position: relative;
+  z-index: 20;
+  width: 40%;
+  display: none;
+}
+.page.active {
+  display: block;
+}
+.page h3 {
+  color: #444;
+  font-size: 36px;
+  padding: 10px 20px;
+  margin: 0;
+}
+.page .buttons {
+  display: flex;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.page .buttons button {
+  color: #009688;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  cursor: pointer;
+}
+.step-1 .tickets {
+  list-style: none;
+  padding: 10px 20px;
+  margin: 0;
+}
+.step-1 .tickets li {
+  display: inline-block;
+  width: 49.6%;
+}
+.step-1 .tickets li a {
+  text-decoration: none;
+}
+.step-1 .tickets li.main {
+  width: 100%;
+}
+.step-1 .tickets li .ticket {
+  padding: 20px;
+  margin: 0 -2px;
+  position: relative;
+}
+.step-1 .tickets li .ticket.rio-sao-francisco {
+  background: url(assets/rio-sao-francisco.jpg) center / cover no-repeat;
+}
+.step-1 .tickets li .ticket.rio-amazonas {
+  background: url(assets/rio-amazonas.jpg) center / cover no-repeat;
+}
+.step-1 .tickets li .ticket.rio-araguaia {
+  background: url(assets/rio-araguaia.jpg) center / cover no-repeat;
+}
+.step-1 .tickets li .ticket.rio-negro {
+  background: url(assets/rio-negro.jpg) center / cover no-repeat;
+}
+.step-1 .tickets li .ticket.rio-solimoes {
+  background: url(assets/rio-solimoes.jpg) center / cover no-repeat;
+}
+.step-1 .tickets li .ticket:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+.step-1 .tickets li .ticket .title,
+.step-1 .tickets li .ticket .time,
+.step-1 .tickets li .ticket .price {
+  z-index: 20;
+  color: #FFF;
+  position: relative;
+}
+.step-1 .tickets li .ticket .title {
+  font-size: 32px;
+}
+.step-1 .tickets li .ticket .time {
+  opacity: .7;
+}
+.step-1 .tickets li .ticket .time:after {
+  content: '';
+  height: 65px;
+  display: block;
+}
+.step-1 .tickets li .ticket .price {
+  text-align: right;
+}
+.step-1 .tickets li .ticket .price span {
+  font-size: 32px;
+}
+.step-1 .tickets li .ticket .price small {
+  font-size: 14px;
+  opacity: .7;
+}
+.step-1 .tickets li .ticket .price:before {
+  content: 'R$';
+  font-size: 14px;
+  opacity: .7;
+}
+.step-3 .boat {
+  width: 300px;
+  margin: 65px auto;
+  position: relative;
+  z-index: 20;
+  background-color: #fff;
+}
+.step-3 .boat:after,
+.step-3 .boat:before {
+  content: '';
+  height: 120px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 70%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.03);
+  z-index: 10;
+  right: 0;
+  left: 0;
+}
+.step-3 .boat:after {
+  bottom: -60px;
+}
+.step-3 .boat:before {
+  top: -60px;
+}
+.step-3 ul {
+  padding: 0px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  list-style: none;
+  position: relative;
+  z-index: 20;
+  background-color: #FFF;
+}
+.step-3 ul .seat {
+  display: block;
+  margin: 30px 10px;
+  background-color: #009688;
+}
+.step-3 ul .seat a {
+  text-decoration: none;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+.step-3 ul .seat a .status {
+  display: block;
+  font-size: 12px;
+}
+.step-3 ul .seat.busy {
+  background-color: #9e9e9e;
+}
+.step-3 ul .seat.busy a {
+  pointer-events: none;
+}
+.step-5 p {
+  padding: 50px;
+  font-size: 90px;
+  text-align: center;
+  color: #444;
+}

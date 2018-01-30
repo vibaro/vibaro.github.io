@@ -1,0 +1,270 @@
+body {
+    margin: 0;
+    display: flex;
+    background: url(assets/bg.jpg) -220px center/cover no-repeat;
+
+    &:before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .55);
+        z-index: 10;
+    }
+
+    a:focus,
+    a:hover,
+    button:focus,
+    button:hover {
+        outline: 5px solid rgba(0, 150, 136, .5);
+    }
+}
+
+.hero {
+    display: flex;
+    border-bottom: 1px solid #000;
+    align-items: center;
+    z-index: 20;
+    width: 60%;
+
+    h1 {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 120px;
+        margin: 80px;
+        color: #fff;
+        position: relative;
+
+        &:after {
+            content: 'remando desde 1238';
+            position: absolute;
+            font-size: 21px;
+            bottom: -5px;
+            font-style: italic;
+            right: 0;
+            opacity: .7;
+        }
+    }
+}
+
+.page {
+    margin: 0 auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #fafafa;
+    position: relative;
+    z-index: 20;
+    width: 40%;
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+    h3 {
+        color: #444;
+        font-size: 36px;
+        padding: 10px 20px;
+        margin: 0;
+    }
+
+    .buttons {
+        display: flex;
+        padding: 20px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+
+        button {
+            color: #009688;
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+            display: block;
+            text-align: center;
+            width: 100%;
+            padding: 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+.step-1 {
+    .tickets {
+        list-style: none;
+        padding: 10px 20px;
+        margin: 0;
+
+        li {
+            display: inline-block;
+            width: 49.6%;
+
+            a {
+                text-decoration: none;
+            }
+
+            &.main {
+                width: 100%;
+            }
+
+            .ticket {
+                padding: 20px;
+                margin: 0 -2px;
+                position: relative;
+
+                &.rio-sao-francisco {
+                    background: url(assets/rio-sao-francisco.jpg) center/cover no-repeat;
+                }
+
+                &.rio-amazonas {
+                    background: url(assets/rio-amazonas.jpg) center/cover no-repeat;
+                }
+
+                &.rio-araguaia {
+                    background: url(assets/rio-araguaia.jpg) center/cover no-repeat;
+                }
+
+                &.rio-negro {
+                    background: url(assets/rio-negro.jpg) center/cover no-repeat;
+                }
+
+                &.rio-solimoes {
+                    background: url(assets/rio-solimoes.jpg) center/cover no-repeat;
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgba(0, 0, 0, .55);
+                    z-index: 10;
+                    top: 0;
+                    left: 0;
+                }
+
+                .title, .time, .price {
+                    z-index: 20;
+                    color: #FFF;
+                    position: relative;
+                }
+
+                .title {
+                    font-size: 32px;
+                }
+
+                .time {
+                    opacity: .7;
+                }
+
+                .time:after {
+                    content: '';
+                    height: 65px;
+                    display: block;
+                }
+
+                .price {
+                    text-align: right;
+
+                    span {
+                        font-size: 32px;
+                    }
+
+                    small {
+                        font-size: 14px;
+                        opacity: .7;
+                    }
+
+                    &:before {
+                        content: 'R$';
+                        font-size: 14px;
+                        opacity: .7;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.step-2 {
+    
+}
+
+.step-3 {
+    .boat {
+        width: 300px;
+        margin: 65px auto;
+        position: relative;
+        z-index: 20;
+        background-color: #fff;
+
+        &:after,
+        &:before {
+            content: '';
+            height: 120px;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 70%;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.03);
+            z-index: 10;
+            right: 0;
+            left: 0;
+        }
+
+        &:after {
+            bottom: -60px;
+        }
+        
+        &:before {
+            top: -60px;
+        }
+    }
+
+    ul {
+        padding: 0px 20px;
+        border: 1px solid rgba(0, 0, 0, .3);
+        list-style: none;
+        position: relative;
+        z-index: 20;
+        background-color: #FFF;
+
+        .seat {
+            display: block;
+            margin: 30px 10px;
+            background-color: rgb(0, 150, 136);
+
+            a {
+                text-decoration: none;
+                text-align: center;
+                padding: 20px;
+                color: #fff;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 24px;
+
+                .status {
+                    display: block;
+                    font-size: 12px;
+                }
+            }
+
+            &.busy {
+                background-color: rgb(158, 158, 158);
+
+                a {
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}
+
+.step-5 {
+    p {
+        padding: 50px;
+        font-size: 90px;
+        text-align: center;
+        color: #444;
+    }
+}
