@@ -78,7 +78,8 @@ body {
         right: 0;
         left: 0;
 
-        button {
+        button, a {
+            text-decoration: none;
             color: #009688;
             background-color: transparent;
             border: none;
@@ -92,7 +93,8 @@ body {
     }
 
     &.ready {
-        .buttons button {
+        .buttons button,
+        .buttons a {
             display: block;
         }
     }
@@ -300,6 +302,7 @@ body {
         display: flex;
         justify-content: center;
         margin: 60px 0;
+        outline: none;
 
         table {
             border-spacing: 0;
@@ -330,10 +333,15 @@ body {
 }
 
 .step-5 {
-    p {
+    a {
         padding: 50px;
         font-size: 70px;
         text-align: center;
         color: #444;
+        outline: none;
+        text-decoration: none;
+        font-weight: normal;
+        outline: none !important;
+        display: block;
     }
 }

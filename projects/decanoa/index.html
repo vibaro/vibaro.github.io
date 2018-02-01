@@ -1,7 +1,7 @@
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
-        <title>De Canoa</title>
+        <title>De Canoa, viagens de canoa!</title>
         <link rel="stylesheet" href="main.css" />
     </head>
 
@@ -13,9 +13,9 @@
         <div data-step="1" class="page step-1 active">
             <h3>Escolha sua rota</h3>
 
-            <ul class="tickets">
+            <ul class="tickets" aria-selected="Rota selecionada.">
                 <li class="main">
-                    <a href="javascript:;">
+                    <a href="javascript:;" aria-label="Rota, Rio São Francisco, viagem de 10 dias, 100 reais. Clique para escolher.">
                         <div class="ticket rio-sao-francisco">
                             <div class="title">
                                 <span>Rio São Francisco</span>
@@ -33,7 +33,7 @@
                 </li>
 
                 <li>
-                    <a href="javascript:;">
+                    <a href="javascript:;" aria-label="Rota, Rio Amazonas, viagem de 49 dias, 500 reais. Clique para escolher.">
                         <div class="ticket rio-amazonas">
                             <div class="title">
                                 <span>Rio Amazonas</span>
@@ -51,7 +51,7 @@
                 </li>
 
                 <li>
-                    <a href="javascript:;">
+                    <a href="javascript:;" aria-label="Rota, Rio Araguaia, viagem de 10 dias, 110 reais. Clique para escolher.">
                         <div class="ticket rio-araguaia">
                             <div class="title">
                                 <span>Rio Araguaia</span>
@@ -69,7 +69,7 @@
                 </li>
 
                 <li>
-                    <a href="javascript:;">
+                    <a href="javascript:;" aria-label="Rota, Rio Negro, viagem de 8 dias, 90 reais. Clique para escolher.">
                         <div class="ticket rio-negro">
                             <div class="title">
                                 <span>Rio Negro</span>
@@ -87,7 +87,7 @@
                 </li>
 
                 <li>
-                    <a href="javascript:;">
+                    <a href="javascript:;" aria-label="Rota, Rio  Solimões, viagem de 8 dias, 90 reais. Clique para escolher.">
                         <div class="ticket rio-solimoes">
                             <div class="title">
                                 <span>Rio Solimões</span>
@@ -117,7 +117,7 @@
                 <div>
                     <h4>Fazemos apenas reservas com 3 dias de antecedência</h4>
 
-                    <select id="date">
+                    <select id="date" class="auto-focus" aria-label="Fazemos apenas reservas com 3 dias de antecedência. Escolha a data.">
                         <option>Hoje</option>
                         <option>Amanhã</option>
                         <option>Depois de amanhã</option>
@@ -136,7 +136,7 @@
             <div class="boat">
                 <ul>
                     <li class="seat">
-                        <a href="javascript:;">
+                        <a href="javascript:;" class="auto-focus" aria-label="Lugar 1 está livre. Clique para escolher.">
                             <span>
                                 <small>Lugar 1</small> <small class="status">livre</small>
                             </span>
@@ -144,15 +144,15 @@
                     </li>
 
                     <li class="seat">
-                        <a href="javascript:;">
+                        <a href="javascript:;" class="busy" aria-label="Lugar 2 está ocupado.">
                             <span>
-                                <small>Lugar 2</small> <small class="status">livre</small>
+                                <small>Lugar 2</small> <small class="status">ocupado</small>
                             </span>
                         </a>
                     </li>
 
                     <li class="seat">
-                        <a href="javascript:;">
+                        <a href="javascript:;" aria-label="Lugar 3 está livre. Clique para escolher.">
                             <span>
                                 <small>Lugar 3</small> <small class="status">livre</small>
                             </span>
@@ -160,9 +160,9 @@
                     </li>
 
                     <li class="seat">
-                        <a href="javascript:;">
+                        <a href="javascript:;" class="busy" aria-label="Lugar 4 está ocupado.">
                             <span>
-                                <small>Lugar 4</small> <small class="status">livre</small>
+                                <small>Lugar 4</small> <small class="status">ocupado</small>
                             </span>
                         </a>
                     </li>
@@ -177,43 +177,43 @@
         <div data-step="4" class="page step-4 ready">
             <h3>Confirme sua viagem</h3>
 
-            <div class="info">
+            <div class="info" aria-hidden="true">
                 <table>
                     <tr>
-                        <td class="title">Rota</td>
+                        <td class="title">Rota:</td>
                         <td class="value js-ticket"></td>
                     </tr>
 
                     <tr>
-                        <td class="title">Duração</td>
+                        <td class="title">Duração:</td>
                         <td class="value js-time"></td>
                     </tr>
 
                     <tr>
-                        <td class="title">Dia</td>
+                        <td class="title">Dia:</td>
                         <td class="value js-day"></td>
                     </tr>
 
                     <tr>
-                        <td class="title">Lugar</td>
+                        <td class="title">Assento:</td>
                         <td class="value js-seat"></td>
                     </tr>
 
                     <tr>
-                        <td class="title">Valor</td>
+                        <td class="title">Valor:</td>
                         <td class="value js-price"></td>
                     </tr>
                 </table>
             </div>
 
             <div class="buttons">
-                <button class="js-next-step">Confirmar compra</button>
+                <a href="javascript:;" class="js-next-step js-confirm" role="button">Confirmar compra</a>
             </div>
         </div>
 
         <div data-step="5" class="page step-5">
             <h3>Pagamento</h3>
-            <p>Bata palmas para pagar, obrigado!</p>
+            <a href="javascript:;" class="auto-focus" aria-label="Pagamento, bata palmas para pagar, obrigado pela participação!">Bata palmas para pagar, obrigado pela participação!</p>
         </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

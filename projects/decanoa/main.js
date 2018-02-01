@@ -9,34 +9,18 @@
          * INIT
         */
         init: function() {
-            decanoa.config();
             decanoa.events();
         },
 
         events: function() {
             $('.page').delegate('.js-next-step', 'click', decanoa.onNextStep);
             $('.tickets, .boat').delegate('a', 'click', decanoa.onSelectItem);
-        },
-
-        config: function() {
-            decanoa.shuffleBusy();
+            $('select').change(decanoa.onSelected)
         },
 
         /**
          * METODOS
         */
-        shuffleBusy: function() {
-            var seats = $('.seat'), seat, random;
-
-            for (var i = 0; i < 2; i++) {
-                random = Math.floor(Math.random() * seats.length),
-                seat   = $(seats.get(random));
-
-                seat.find('a').addClass('busy').end()
-                    .find('.status').html('ocupado');
-            }
-        },
-
         printInfo: function() {
             var ticket = $('.selected', '.tickets');
 
@@ -44,7 +28,17 @@
                       .find('.js-time').html(ticket.find('.time').html()).end()
                       .find('.js-price').html(ticket.find('.price').html()).end()
                       .find('.js-day').html($('#date').val()).end()
-                      .find('.js-seat').html( $('.selected span small', '.boat').html());
+                      .find('.js-seat').html( $('.selected span small', '.boat').html()).end();
+
+            setTimeout(() => {
+                if ($('.step-4').hasClass('active')) {
+                        $('.js-confirm').attr('aria-label', decanoa.getResume()).show().focus();
+                    }
+            }, 100)
+        },
+
+        getResume: function(info) {
+            return `Viagem: ${$('.js-ticket', info).text().trim()}; Duração: ${$('.js-time', info).text().trim()}; Dia: ${$('.js-day', info).text().trim()}; Assento: ${$('.js-seat', info).text().trim()}; Valor: ${$('.js-price span', info).text().trim()} reais. Clique para confirmar.`;
         },
 
         /**
@@ -52,19 +46,25 @@
         */
         onNextStep: function() {
             $('.page.active').removeClass('active');
-            $('.page[data-step=' + (++decanoa.step) + ']').addClass('active');
+            $('.page[data-step=' + (++decanoa.step) + ']').addClass('active').find('.auto-focus').focus();
             decanoa.printInfo();
         },
 
         onSelectItem: function() {
-            var link = $(this).closest('a');
+            var link = $(this).closest('a'),
+                page = $(this).closest('.page');
 
             if (!link.hasClass('busy')) {
                 $('.selected', '.page.active').removeClass('selected');
-    
-                $(this).closest('a').addClass('selected').end()
-                       .closest('.page').addClass('ready').focus();
+
+                $(this).closest('a').addClass('selected');
+                page.addClass('ready');
+                decanoa.onSelected();
             }
+        },
+
+        onSelected: function() {
+            $('.js-next-step', '.page.ready').focus();
         }
     }
 

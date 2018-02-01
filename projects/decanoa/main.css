@@ -70,7 +70,9 @@ body select:hover {
   right: 0;
   left: 0;
 }
-.page .buttons button {
+.page .buttons button,
+.page .buttons a {
+  text-decoration: none;
   color: #009688;
   background-color: transparent;
   border: none;
@@ -81,7 +83,8 @@ body select:hover {
   cursor: pointer;
   display: none;
 }
-.page.ready .buttons button {
+.page.ready .buttons button,
+.page.ready .buttons a {
   display: block;
 }
 .step-1 .tickets {
@@ -249,6 +252,7 @@ body select:hover {
   display: flex;
   justify-content: center;
   margin: 60px 0;
+  outline: none;
 }
 .step-4 .info table {
   border-spacing: 0;
@@ -267,9 +271,14 @@ body select:hover {
   text-align: left;
   color: #555;
 }
-.step-5 p {
+.step-5 a {
   padding: 50px;
   font-size: 70px;
   text-align: center;
   color: #444;
+  outline: none;
+  text-decoration: none;
+  font-weight: normal;
+  outline: none !important;
+  display: block;
 }
