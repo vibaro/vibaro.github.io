@@ -6,15 +6,32 @@
         step: 1,
 
         /**
-         * CONFIG
+         * INIT
         */
         init: function() {
+            decanoa.config();
             decanoa.events();
         },
 
         events: function() {
             $('.page').delegate('.js-next-step', 'click', decanoa.onNextStep);
             $('.tickets, .boat').delegate('a', 'click', decanoa.onSelectItem);
+        },
+
+        config: function() {
+            decanoa.shuffleBusy();
+        },
+
+        shuffleBusy: function() {
+            var seats = $('.seat'), seat, random;
+
+            for (var i = 0; i < 2; i++) {
+                random = Math.floor(Math.random() * seats.length),
+                seat   = $(seats.get(random));
+
+                seat.find('a').addClass('busy').end()
+                    .find('.status').html('ocupado');
+            }
         },
 
         /**
@@ -26,10 +43,14 @@
         },
 
         onSelectItem: function() {
-            $('.selected', '.page.active').removeClass('selected');
+            var link = $(this).closest('a');
 
-            $(this).closest('a').addClass('selected').end()
-                   .closest('.page').addClass('ready').focus();
+            if (!link.hasClass('busy')) {
+                $('.selected', '.page.active').removeClass('selected');
+    
+                $(this).closest('a').addClass('selected').end()
+                       .closest('.page').addClass('ready').focus();
+            }
         }
     }
 

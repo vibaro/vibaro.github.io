@@ -26,7 +26,7 @@
                             </div>
 
                             <div class="price">
-                                <span>110<small>,00</small></span>
+                                <span>110<small aria-hidden="true">,00</small></span>
                             </div>
                         </div>
                     </a>
@@ -44,7 +44,7 @@
                             </div>
 
                             <div class="price">
-                                <span>500<small>,00</small></span>
+                                <span>500<small aria-hidden="true">,00</small></span>
                             </div>
                         </div>
                     </a>
@@ -62,7 +62,7 @@
                             </div>
 
                             <div class="price">
-                                <span>110<small>,00</small></span>
+                                <span>110<small aria-hidden="true">,00</small></span>
                             </div>
                         </div>
                     </a>
@@ -80,7 +80,7 @@
                             </div>
 
                             <div class="price">
-                                <span>90<small>,00</small></span>
+                                <span>90<small aria-hidden="true">,00</small></span>
                             </div>
                         </div>
                     </a>
@@ -98,7 +98,7 @@
                             </div>
 
                             <div class="price">
-                                <span>90<small>,00</small></span>
+                                <span>90<small aria-hidden="true">,00</small></span>
                             </div>
                         </div>
                     </a>
@@ -110,7 +110,7 @@
             </div>
         </div>
 
-        <div data-step="2" class="page step-2 ready">
+        <form data-step="2" class="page step-2 ready">
             <h3>Escolha o dia</h3>
 
             <div class="form">
@@ -128,7 +128,7 @@
             <div class="buttons">
                 <button class="js-next-step">Escolher o assento</button>
             </div>
-        </div>
+        </form>
 
         <div data-step="3" class="page step-3">
             <h3>Escolha seu lugar na canoa</h3>
@@ -136,26 +136,34 @@
             <div class="boat">
                 <ul>
                     <li class="seat">
-                        <a href="javascript:;" class="busy">
-                            <span><small>Lugar</small> 1 <small class="status">ocupado</small></span>
+                        <a href="javascript:;">
+                            <span>
+                                <small>Lugar</small> 1 <small class="status">livre</small>
+                            </span>
                         </a>
                     </li>
 
                     <li class="seat">
                         <a href="javascript:;">
-                            <span><small>Lugar</small> 2 <small class="status">livre</small></span>
+                            <span>
+                                <small>Lugar</small> 2 <small class="status">livre</small>
+                            </span>
                         </a>
                     </li>
 
                     <li class="seat">
                         <a href="javascript:;">
-                            <span><small>Lugar</small> 3 <small class="status">livre</small></span>
+                            <span>
+                                <small>Lugar</small> 3 <small class="status">livre</small>
+                            </span>
                         </a>
                     </li>
 
                     <li class="seat">
-                        <a href="javascript:;" class="busy">
-                            <span><small>Lugar</small> 4 <small class="status">ocupado</small></span>
+                        <a href="javascript:;">
+                            <span>
+                                <small>Lugar</small> 4 <small class="status">livre</small>
+                            </span>
                         </a>
                     </li>
                 </ul>
