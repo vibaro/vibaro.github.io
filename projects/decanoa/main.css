@@ -165,11 +165,6 @@ body select:hover {
   font-size: 14px;
   opacity: .7;
 }
-.step-1 .tickets li .ticket .price:before {
-  content: 'R$';
-  font-size: 14px;
-  opacity: .7;
-}
 .step-2 .form {
   padding: 10px 20px;
   display: flex;
@@ -255,14 +250,22 @@ body select:hover {
   justify-content: center;
   margin: 60px 0;
 }
+.step-4 .info table {
+  border-spacing: 0;
+}
 .step-4 .info table tr td {
-  padding: 10px 20px;
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 150, 136, 0.4);
+}
+.step-4 .info table tr:last-child td {
+  border: none;
 }
 .step-4 .info table .title {
   text-align: right;
 }
 .step-4 .info table .value {
   text-align: left;
+  color: #555;
 }
 .step-5 p {
   padding: 50px;

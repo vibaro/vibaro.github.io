@@ -1,7 +1,7 @@
 !function() {
     var decanoa = {
         /**
-         * VARIABLES
+         * VARIAVEIS
         */
         step: 1,
 
@@ -22,6 +22,9 @@
             decanoa.shuffleBusy();
         },
 
+        /**
+         * METODOS
+        */
         shuffleBusy: function() {
             var seats = $('.seat'), seat, random;
 
@@ -34,12 +37,23 @@
             }
         },
 
+        printInfo: function() {
+            var ticket = $('.selected', '.tickets');
+
+            $('.info').find('.js-ticket').html(ticket.find('.title').html()).end()
+                      .find('.js-time').html(ticket.find('.time').html()).end()
+                      .find('.js-price').html(ticket.find('.price').html()).end()
+                      .find('.js-day').html($('#date').val()).end()
+                      .find('.js-seat').html( $('.selected span small', '.boat').html());
+        },
+
         /**
          * EVENTOS
         */
         onNextStep: function() {
             $('.page.active').removeClass('active');
             $('.page[data-step=' + (++decanoa.step) + ']').addClass('active');
+            decanoa.printInfo();
         },
 
         onSelectItem: function() {
@@ -54,8 +68,5 @@
         }
     }
 
-    /**
-     * INIT
-    */
     $(document).ready(decanoa.init);
 } ();
